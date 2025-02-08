@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-dars</title>
+    <style>
+        .massiv{
+
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+            height: 80vh;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            
+        }
+        #btn{
+
+            padding: 10px 50px;
+            border-radius: 25px;
+            color: red;
+
+        }
+        #input , #input2 , #output{
+            border-radius: 25px; 
+            width: 300px;
+            padding: 10px 20px;
+            outline: none;
+            font-size: 20px;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <div class="massiv">
+
+            <input type="text" id="output" placeholder="Result" value="" readonly>
+            <label for="input">birinchi massiv elementlarini kiriting. Elemetlar orasi , bilan ajratilsin!!!</label>
+            <input type="text" id="input">
+            <label for="input2">ikkinchi massiv elementlarini kiriting. Elemetlar orasi , bilan ajratilsin!! </label>
+            <input type="text" id="input2">
+            <input type="button" value="Result" id="btn">
+
+        </div>
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

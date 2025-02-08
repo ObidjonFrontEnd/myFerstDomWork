@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-dars</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+
+    <div class="kankulator max-w-[280px] mx-auto mt-[100px] border-solid-thin border-[1px] rounded-[5px] shadow-md">
+        <h1 id="rezalt" class="text-center py-[45px] h-[30px]"></h1>
+        <div class="mx-auto text-center my-[40px]">
+            <input type="text" name="" id="in_id" placeholder="0" readonly
+                class="border-solid border-[1px] border-[black] w-[220px] h-[40px] rounded-[50px] px-[35px] outline-[0px]">
+        </div>
+
+
+
+
+
+        <div class="flex gap-[20px] max-w-[800px] justify-center mx-auto">
+
+            <div class="grid  grid-cols-3 max-w-[600px]  gap-[20px]">
+                <div class="n1 ">
+                    <input class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" id="bir" type="button"
+                        value="1" onclick="setIntput(1)">
+                </div>
+                <div class="n1 mx-auto">
+                    <input id="ikki" type="button" class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" value="2"
+                        onclick="setIntput(2)">
+                </div>
+                <div class="n1 mx-auto">
+                    <input id="uch" type="button" class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" value="3"
+                        onclick="setIntput(3)">
+                </div>
+                <div class="n1 mx-auto">
+                    <input id="tor" type="button" class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" value="4"
+                        onclick="setIntput(4)">
+                </div>
+                <div class="n1 mx-auto">
+                    <input id="besh" type="button" class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" value="5"
+                        onclick="setIntput(5)">
+                </div>
+                <div class="n1 mx-auto">
+                    <input id="olti" type="button" class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" value="6"
+                        onclick="setIntput(6)">
+                </div>
+                <div class="n1 mx-auto">
+                    <input id="yetti" type="button" class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" value="7"
+                        onclick="setIntput(7)">
+                </div>
+                <div class="n1 mx-auto">
+                    <input id="sakiz" type="button" class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" value="8"
+                        onclick="setIntput(8)">
+                </div>
+                <div class="n1 mx-auto">
+                    <input id="toqiz" type="button" class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" value="9"
+                        onclick="setIntput(9)">
+                </div>
+                <div class="n1 mx-auto">
+                    <input id="nol" type="button" class="rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" value="0"
+                        onclick="setIntput(0)">
+                </div>
+
+
+
+                <button id="clearLast" class="flex justify-center items-center rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                        class="bi bi-backspace" viewBox="0 0 16 16">
+                        <path
+                            d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z" />
+                        <path
+                            d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z" />
+                    </svg>
+                </button>
+                <button class="flex justify-center items-center rounded-[10px] w-[40px] h-[40px] bg-[orange] text-[white]" id="clear">
+                    C
+                </button>
+
+            </div>
+
+
+            <div class="max-w-[200px] flex flex-col gap-[20px]">
+                <div class="n1 mx-auto">
+                    <input id="pilus" type="button" class="h-[40px] bg-[black] text-[white] w-[40px] rounded-[10px]  "
+                        value="+" onclick="operator('+')">
+                </div>
+
+                <div class="n1 mx-auto">
+                    <input id="minus" type="button" class="h-[40px] bg-[black] text-[white] w-[40px] rounded-[10px]"
+                        value="-" onclick="operator('-')">
+                </div>
+
+                <div class="n1 mx-auto">
+                    <input id="kop" type="button" class="h-[40px] bg-[black] text-[white] w-[40px] rounded-[10px]"
+                        value="*" onclick="operator('*')">
+                </div>
+
+                <div class="n1 mx-auto">
+                    <input id="bol" type="button" class="h-[40px] bg-[black] text-[white] w-[40px] rounded-[10px]"
+                        value="/" onclick="operator('/')">
+                </div>
+                
+
+
+
+            </div>
+
+            
+        </div>
+       <div class="max-w-800px mx-auto flex justify-center py-[20px]">
+        <button id="btn" class="h-[50px] bg-[black] text-[white] w-[220px] rounded-[10px] mx-auto"> = </button>
+       </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
